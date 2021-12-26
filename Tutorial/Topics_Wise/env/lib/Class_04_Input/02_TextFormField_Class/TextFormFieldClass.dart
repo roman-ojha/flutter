@@ -14,6 +14,7 @@ class TextFormFieldClass extends StatelessWidget {
               children: <Widget>[
                 TextFormField(
                   decoration: InputDecoration(
+                     contentPadding: const EdgeInsets.all(0.0),
                     labelText: "Username",
                     labelStyle: TextStyle(
                         // to style the label text

@@ -52,6 +52,12 @@ class _FlutterButtonWidgetState extends State<FlutterButtonWidget> {
                 icon: Icon(Icons.home),
                 label: Text("Icon Button"),
               ),
+              // Text Icon Image Button------------------------------
+              TextButton.icon(
+                onPressed: () {},
+                icon: Image.asset("assets/images/img1.jpg"),
+                label: Text("Icon Button"),
+              ),
               // ElevatedButton ------------------------
               ElevatedButton(
                 onPressed: () {},
@@ -62,6 +68,9 @@ class _FlutterButtonWidgetState extends State<FlutterButtonWidget> {
                 onPressed: () {},
                 icon: Icon(Icons.home),
                 label: Text("Elevated Button Icon"),
+                 style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            ),
               ),
               // FloatingActionButton -------------------------------
               FloatingActionButton(

@@ -1,2 +1,7 @@
 *) To run localhost in emulator:
     -> use http://10.0.2.2:[port]/
+
+
+*) Command:
+    -> flutter devices (to see how many devices are connected which run flutter application)
+    -> flutter run (to run the current project that we are in)

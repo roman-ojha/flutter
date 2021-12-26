@@ -1,4 +1,28 @@
+/*
+  -> to use a custom icon we have to go to https://www.fluttericon.com/
+  -> and chose icon or drag an icon into the website and we can edit the icon there
+  -> and the we have to change the class name of the icon
+      -> now we will going to get file:
+          -> fonts
+                - <Icon_Name>.ttf
+            -config
+            -<Icon_Name>.dart
+          
+      -> now drag a <Icon_Name>.tff file in assets/fonts folder
+      -> now we will create a folder in lib/assets/icons called assets
+      -> and drag a dart file into that lib/assets/icons a dart file
+
+      -> and import this in pubspec.yaml:
+          -> fonts:
+              - family: FacebookIcon
+                fonts:
+                 - asset: assets/fonts/FacebookIcon.ttf
+*/
+
 import 'package:flutter/material.dart';
+
+// import custom icon
+import 'assets/icons/facebook_icon.dart';
 
 class IconClass extends StatelessWidget {
   @override
@@ -19,7 +43,8 @@ class IconClass extends StatelessWidget {
                     size: 40,
                   ),
                   Icon(
-                    Icons.favorite,
+                    FacebookIcon.facebook_icon,
+                    // here we are using the custom icon
                     color: Colors.pink,
                     size: 40,
                   ),
