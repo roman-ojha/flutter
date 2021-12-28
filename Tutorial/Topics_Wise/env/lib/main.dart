@@ -54,22 +54,23 @@ import 'package:flutter/material.dart';
 // import 'Class_00_Other_Topics/02_Builder/01_Builder_Class/01_Builder_Class.dart';
 // import 'Class_00_Other_Topics/02_Builder/02_ListView_Builder/02_ListView_Builder.dart';
 // import 'Class_17_State_Management/02_Redux/02_Redux.dart';
-import 'Class_00_Other_Topics/03_Env/03_Env.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'Class_00_Other_Topics/03_Env/models/environment.dart';
+// import 'Class_00_Other_Topics/03_Env/03_Env.dart';
+// import 'package:flutter_dotenv/flutter_dotenv.dart';
+// import 'Class_00_Other_Topics/03_Env/models/environment.dart';
+import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
 
-// void main() async {
-//   // Class 21 -------------
-//   // await Hive.initFlutter();
-//   runApp(MyApp());
-// }
-
-// Class 00 ---------------
-Future<void> main() async {
-  await dotenv.load(fileName: Environment.fileName);
-  // await dotenv.load(fileName: ".env");
+void main() async {
+  // Class 21 -------------
+  // await Hive.initFlutter();
   runApp(MyApp());
 }
+
+// Class 00 ---------------
+// Future<void> main() async {
+//   await dotenv.load(fileName: Environment.fileName);
+//   // await dotenv.load(fileName: ".env");
+//   runApp(MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   @override
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
     // Class 00 ----------------
     // return BuilderClass();
     // return ListViewBuilder();
-    return FlutterEnv();
+    // return FlutterEnv();
 
     // class 01-----------------
     // return TextWidget();
@@ -167,5 +168,8 @@ class MyApp extends StatelessWidget {
 
     // Class 21 ----------------
     // return HiveDatabase();
+
+    // Class 22 ------------------
+    return FlutterCustomClipperWidget();
   }
 }
