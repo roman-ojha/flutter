@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 // importing custom widget
 // import 'Class_01_Text_Widget/Text/TextWidget.dart';
+import 'Class_01_Text_Widget/02_Rich_Text/02_Rich_Text.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/01_Container_Class/ContainerWidget.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/02_Align_Class/AlignClass.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/03_Center_Class/CenterClass.dart';
@@ -58,7 +59,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 // import 'Class_00_Other_Topics/03_Env/models/environment.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
-import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
+// import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
 
 void main() async {
   // Class 21 -------------
@@ -83,6 +84,7 @@ class MyApp extends StatelessWidget {
 
     // class 01-----------------
     // return TextWidget();
+    return RichTextWidget();
 
     // class 02-----------------
     // return ContainerClass();
@@ -174,6 +176,6 @@ class MyApp extends StatelessWidget {
     // return FlutterCustomClipperWidget();
 
     // Class 23 --------------------
-    return ResponsiveFlutter01();
+    // return ResponsiveFlutter01();
   }
 }
