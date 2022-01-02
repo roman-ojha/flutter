@@ -57,7 +57,8 @@ import 'package:flutter/material.dart';
 // import 'Class_00_Other_Topics/03_Env/03_Env.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 // import 'Class_00_Other_Topics/03_Env/models/environment.dart';
-import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
+// import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
+import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
 
 void main() async {
   // Class 21 -------------
@@ -170,6 +171,9 @@ class MyApp extends StatelessWidget {
     // return HiveDatabase();
 
     // Class 22 ------------------
-    return FlutterCustomClipperWidget();
+    // return FlutterCustomClipperWidget();
+
+    // Class 23 --------------------
+    return ResponsiveFlutter01();
   }
 }
