@@ -60,6 +60,7 @@ import 'Class_01_Text_Widget/02_Rich_Text/02_Rich_Text.dart';
 // import 'Class_00_Other_Topics/03_Env/models/environment.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
 // import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
+import "package:env/Class_24_AlertDialog/01_AlertDialog_Class/01_AlertDialog_Class.dart";
 
 void main() async {
   // Class 21 -------------
@@ -84,7 +85,7 @@ class MyApp extends StatelessWidget {
 
     // class 01-----------------
     // return TextWidget();
-    return RichTextWidget();
+    // return RichTextWidget();
 
     // class 02-----------------
     // return ContainerClass();
@@ -177,5 +178,10 @@ class MyApp extends StatelessWidget {
 
     // Class 23 --------------------
     // return ResponsiveFlutter01();
+
+    // Class 24 ------------------------
+    return MaterialApp(
+      home: AlertDialogClass(),
+    );
   }
 }
