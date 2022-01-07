@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 
 class AlertDialogClass extends StatefulWidget {
   const AlertDialogClass({Key? key}) : super(key: key);
@@ -111,7 +113,34 @@ class AlertDialogClassState extends State<AlertDialogClass> {
                   ],
                 ),
               ),
-            )
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+              ),
+              child: Text("Exit App"),
+              onPressed: () => showDialog(
+                context: context,
+                builder: (BuildContext context) => AlertDialog(
+                  title: Text("Are you sure?"),
+                  content: Text("Do you want to exit from this app?"),
+                  elevation: 24.0,
+                  actions: [
+                    TextButton(
+                      child: Text("EXIT"),
+                      onPressed: () => SystemNavigator.pop(),
+                    ),
+                    TextButton(
+                      child: Text("CANCEL"),
+                      onPressed: () => Navigator.of(context).pop(false),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
