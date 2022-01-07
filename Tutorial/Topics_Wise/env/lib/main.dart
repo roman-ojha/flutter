@@ -43,6 +43,7 @@ import 'Class_01_Text_Widget/02_Rich_Text/02_Rich_Text.dart';
 // import 'Class_14_Gesture_Detector_Class/01_Gesture_Detector_Class.dart';
 // import 'Class_15_Other_Widgets/01_Buttons/Flutter_Buttons.dart';
 // import "Class_15_Other_Widgets/02_Circle_Avatar_Class/02_Circle_Avatar_Class.dart";
+import 'Class_15_Other_Widgets/03_Toast/01_Toast/01_Toast.dart';
 // import "Class_17_State_Management/01_setState_Method/setState.dart";
 // import "Class_18_Notification/01_Local_Push_Notifications/01_Local_Push_Notifications.dart";
 // import "Class_05_Bar/05_Search_Bar/05_Search_Bar.dart";
@@ -60,7 +61,7 @@ import 'Class_01_Text_Widget/02_Rich_Text/02_Rich_Text.dart';
 // import 'Class_00_Other_Topics/03_Env/models/environment.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
 // import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
-import "package:env/Class_24_AlertDialog/01_AlertDialog_Class_and_Exiting_App/01_AlertDialog_Class.dart";
+// import "package:env/Class_24_AlertDialog/01_AlertDialog_Class_and_Exiting_App/01_AlertDialog_Class.dart";
 
 void main() async {
   // Class 21 -------------
@@ -153,6 +154,7 @@ class MyApp extends StatelessWidget {
     // Class 15------------------
     // return FlutterButtonWidget();
     // return CircleAvatarClass();
+    return Toast01();
 
     // Class 17 ------------------
     // return SetStateMng();
@@ -180,8 +182,8 @@ class MyApp extends StatelessWidget {
     // return ResponsiveFlutter01();
 
     // Class 24 ------------------------
-    return MaterialApp(
-      home: AlertDialogClass(),
-    );
+    // return MaterialApp(
+    //   home: AlertDialogClass(),
+    // );
   }
 }
