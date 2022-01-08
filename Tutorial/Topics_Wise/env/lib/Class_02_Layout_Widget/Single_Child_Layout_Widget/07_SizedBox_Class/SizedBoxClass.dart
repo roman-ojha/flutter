@@ -34,6 +34,13 @@ class SizedBoxClass extends StatelessWidget {
                 onPressed: null,
               ),
             ),
+            SizedBox.expand(
+              // expand function will expand the size of widget upto screen
+              child: Container(
+                alignment: Alignment.center,
+                child: Text("Hello"),
+              ),
+            )
           ],
         ),
       ),

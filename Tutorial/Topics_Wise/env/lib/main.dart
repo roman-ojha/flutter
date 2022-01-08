@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // importing custom widget
-import "Class_00_Other_Topics/02_Builder/03_FutureBuilder/03_FutureBuilder.dart";
+// import "Class_00_Other_Topics/02_Builder/03_FutureBuilder/03_FutureBuilder.dart";
 // import 'Class_01_Text_Widget/Text/TextWidget.dart';
 // import 'Class_01_Text_Widget/02_Rich_Text/02_Rich_Text.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/01_Container_Class/ContainerWidget.dart';
@@ -19,7 +19,8 @@ import "Class_00_Other_Topics/02_Builder/03_FutureBuilder/03_FutureBuilder.dart"
 // import 'Class_02_Layout_Widget/Multi_Child_Layout_Widget/05_Table_Class/TableClass.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/08_ConstrainedBox_Class/ConstrainedBoxClass.dart';
 // import 'Class_02_Layout_Widget/Multi_Child_Layout_Widget/06_GridView_Class/GridViewClassCountConstructor.dart';
-import "Class_02_Layout_Widget/Single_Child_Layout_Widget/10_SingleChildScrollView_Class/10_SingleChildScrollView_Class.dart";
+// import "Class_02_Layout_Widget/Single_Child_Layout_Widget/10_SingleChildScrollView_Class/10_SingleChildScrollView_Class.dart";
+import "Class_02_Layout_Widget/Single_Child_Layout_Widget/11_FractionallySizedBox/11_FractionallySizedBox.dart";
 // import 'Class_04_Input/01_Form_Class/FormClass.dart';
 // import 'Class_04_Input/02_TextFormField_Class/TextFormFieldClass.dart';
 // import 'Class_03_Assets_and_Image_and_Icons/02_Icon_Class/IconClass.dart';
@@ -109,7 +110,8 @@ class MyApp extends StatelessWidget {
     // return GridViewClassCountConstructor();
     // return TrasnsformClass();
     // return DrawerWidget();
-    return SingleChildScrollViewClass();
+    // return SingleChildScrollViewClass();
+    return FractionallySizeboxClass();
 
     // Class 03-----------------
     // return ImageClass();
