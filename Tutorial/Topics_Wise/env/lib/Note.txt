@@ -5,3 +5,23 @@
 *) Command:
     -> flutter devices (to see how many devices are connected which run flutter application)
     -> flutter run (to run the current project that we are in)
+
+
+*) To get the total size of context:
+        ->  MediaQuery.of(context).size.width
+
+
+*) to make video landscape and potrait mode:
+    ->  Future setLandScap() async {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+    ]);
+  }
+    ->  Future setPotraitMode() async {
+    await SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitDown,
+      DeviceOrientation.portraitUp,
+    ]);
+  }
+
