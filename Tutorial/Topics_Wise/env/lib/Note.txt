@@ -5,6 +5,8 @@
 *) Command:
     -> flutter devices (to see how many devices are connected which run flutter application)
     -> flutter run (to run the current project that we are in)
+    -> flutter run -d <devices name> (to run for the spacific devices)
+    -> flutter pub add <package_name> (to install third party packages)
 
 
 *) To get the total size of context:
@@ -24,4 +26,3 @@
       DeviceOrientation.portraitUp,
     ]);
   }
-

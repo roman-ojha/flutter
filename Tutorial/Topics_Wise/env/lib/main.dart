@@ -51,6 +51,7 @@ import "Class_02_Layout_Widget/Single_Child_Layout_Widget/13_Flexible_Class/13_F
 // import "Class_15_Other_Widgets/02_Circle_Avatar_Class/02_Circle_Avatar_Class.dart";
 // import 'Class_15_Other_Widgets/03_Toast/01_Toast/01_Toast.dart';
 // import "Class_17_State_Management/01_setState_Method/setState.dart";
+import 'Class_17_State_Management/02_Redux/02_Redux.dart';
 // import "Class_18_Notification/01_Local_Push_Notifications/01_Local_Push_Notifications.dart";
 // import "Class_05_Bar/05_Search_Bar/05_Search_Bar.dart";
 // import "Class_19_Passing_Data_Between_Wedget/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent.dart";
@@ -61,7 +62,6 @@ import "Class_02_Layout_Widget/Single_Child_Layout_Widget/13_Flexible_Class/13_F
 // import 'package:hive_flutter/hive_flutter.dart';
 // import 'Class_00_Other_Topics/02_Builder/01_Builder_Class/01_Builder_Class.dart';
 // import 'Class_00_Other_Topics/02_Builder/02_ListView_Builder/02_ListView_Builder.dart';
-// import 'Class_17_State_Management/02_Redux/02_Redux.dart';
 // import 'Class_00_Other_Topics/03_Env/03_Env.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 // import 'Class_00_Other_Topics/03_Env/models/environment.dart';
@@ -115,7 +115,7 @@ class MyApp extends StatelessWidget {
     // return SingleChildScrollViewClass();
     // return FractionallySizeboxClass();
     // return PositionedClass();
-    return FlexibleClass();
+    // return FlexibleClass();
 
     // Class 03-----------------
     // return ImageClass();
@@ -170,7 +170,7 @@ class MyApp extends StatelessWidget {
 
     // Class 17 ------------------
     // return SetStateMng();
-    // return FlutterRedux();
+    return FlutterRedux();
 
     // Class 18 ------------------
     // return MaterialApp(

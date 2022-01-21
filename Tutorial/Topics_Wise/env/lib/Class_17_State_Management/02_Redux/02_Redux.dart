@@ -1,4 +1,8 @@
 /*
+  -> https://github.com/dabit3/flutter-redux-example (for example to watch)
+*/
+
+/*
   -> Redux has three principle:
       1) Single source of truth
       2) State is immputable
