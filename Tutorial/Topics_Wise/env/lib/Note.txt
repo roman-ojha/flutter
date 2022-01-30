@@ -1,19 +1,25 @@
+
+
 *) To run localhost in emulator:
     -> use http://10.0.2.2:[port]/
 
 
 *) Command:
+    -> flutter create <project_name>
     -> flutter devices (to see how many devices are connected which run flutter application)
+    -> flutter doctor
     -> flutter run (to run the current project that we are in)
     -> flutter run -d <devices name> (to run for the spacific devices)
     -> flutter pub add <package_name> (to install third party packages)
+    -> flutter pub remove (to remove the package from the flutter application)
+    -> flutter --version (to check the version of flutter that is installed in your computer)
 
 
 *) To get the total size of context:
         ->  MediaQuery.of(context).size.width
 
 
-*) to make video landscape and potrait mode:
+*) to make Device landscape and potrait mode:
     ->  Future setLandScap() async {
     await SystemChrome.setPreferredOrientations([
       DeviceOrientation.landscapeRight,
