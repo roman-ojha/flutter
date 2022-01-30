@@ -22,7 +22,7 @@ import 'package:flutter/material.dart';
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/10_SingleChildScrollView_Class/10_SingleChildScrollView_Class.dart";
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/11_FractionallySizedBox/11_FractionallySizedBox.dart";
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/12_Positioned_Class/12_Positioned_Class.dart";
-import "Class_02_Layout_Widget/Single_Child_Layout_Widget/13_Flexible_Class/13_Flexible_Class.dart";
+// import "Class_02_Layout_Widget/Single_Child_Layout_Widget/13_Flexible_Class/13_Flexible_Class.dart";
 // import 'Class_04_Input/01_Form_Class/FormClass.dart';
 // import 'Class_04_Input/02_TextFormField_Class/TextFormFieldClass.dart';
 // import 'Class_03_Assets_and_Image_and_Icons/02_Icon_Class/IconClass.dart';
@@ -51,7 +51,7 @@ import "Class_02_Layout_Widget/Single_Child_Layout_Widget/13_Flexible_Class/13_F
 // import "Class_15_Other_Widgets/02_Circle_Avatar_Class/02_Circle_Avatar_Class.dart";
 // import 'Class_15_Other_Widgets/03_Toast/01_Toast/01_Toast.dart';
 // import "Class_17_State_Management/01_setState_Method/setState.dart";
-import 'Class_17_State_Management/02_Redux/02_Redux.dart';
+// import 'Class_17_State_Management/02_Redux/02_Redux.dart';
 // import "Class_18_Notification/01_Local_Push_Notifications/01_Local_Push_Notifications.dart";
 // import "Class_05_Bar/05_Search_Bar/05_Search_Bar.dart";
 // import "Class_19_Passing_Data_Between_Wedget/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent.dart";
@@ -68,6 +68,8 @@ import 'Class_17_State_Management/02_Redux/02_Redux.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
 // import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
 // import "package:env/Class_24_AlertDialog/01_AlertDialog_Class_and_Exiting_App/01_AlertDialog_Class.dart";
+// import 'Class_25_File/01_Read_and_Write_Files/01_Read_and_Write_Files.dart';
+import "Class_25_File/02_File_Picker/02_File_Picker.dart";
 
 void main() async {
   // Class 21 -------------
@@ -170,7 +172,7 @@ class MyApp extends StatelessWidget {
 
     // Class 17 ------------------
     // return SetStateMng();
-    return FlutterRedux();
+    // return FlutterRedux();
 
     // Class 18 ------------------
     // return MaterialApp(
@@ -197,5 +199,14 @@ class MyApp extends StatelessWidget {
     // return MaterialApp(
     //   home: AlertDialogClass(),
     // );
+
+    // Class 25 ------------------------
+    // return MaterialApp(
+    //   home: ReadAndWriteFile(),
+    // );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: FilePickerClass(),
+    );
   }
 }
