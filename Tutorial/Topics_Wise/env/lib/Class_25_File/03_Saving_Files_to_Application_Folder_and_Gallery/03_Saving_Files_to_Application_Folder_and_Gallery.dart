@@ -10,7 +10,7 @@
     
     -> on Android:
         -> now go to android/app/src/main/AndroidManifest.xml add this:
-          ->  <uses-permission android:name="android.permission.INTERNET"/>    
+          ->  <uses-permission android:name="android.permission.INTERNET"/>
               <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
           -> for the internet and external storage permission
 
