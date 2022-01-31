@@ -55,6 +55,6 @@
 			</dict>
 		</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-<string>Explain why your app uses photo library</string>
+<string>This app needs to use Photos</string>
 </dict>
 </plist>

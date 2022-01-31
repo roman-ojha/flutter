@@ -50,6 +50,8 @@ dependencies:
   audioplayers: ^0.20.1
   file_picker: ^4.3.3
   open_file: ^3.2.1
+  image_gallery_saver: ^1.7.1
+  permission_handler: ^8.3.0
 
 dev_dependencies:
   flutter_test:

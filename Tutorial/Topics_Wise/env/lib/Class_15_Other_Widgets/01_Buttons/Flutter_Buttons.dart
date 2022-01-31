@@ -51,6 +51,9 @@ class _FlutterButtonWidgetState extends State<FlutterButtonWidget> {
                 onPressed: () {},
                 icon: Icon(Icons.home),
                 label: Text("Icon Button"),
+                 style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue),
+                ),
               ),
               // Text Icon Image Button------------------------------
               TextButton.icon(

@@ -3,6 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 /*
+  *) path_provider:
+      a) getApplicationDocumentsDirectory()
+        -> this method return a directoy object that points to the location on your user's devices that the operating system has allocated for you app
+      b) getApplicationSupportDirectory()
+        -> if you have a different data, like manifest file and other supporting documents from your server then we will use getApplicationSupportDirectory
+*/
+
+/*
 Temporary directory
 A temporary directory (cache) that the system can clear at any time. On iOS, this corresponds to the NSCachesDirectory. On Android, this is the value that getCacheDir() returns.
 
@@ -26,11 +34,11 @@ class _ReadAndWriteFileState extends State<ReadAndWriteFile> {
     // '/data/user/0/com.example.<app_name>'
     // From your path:/data/user/0/com.companyname.notes/files/.local/share/Notes.txt, we can know that you want to access internal storage, but Internal storage refers to the non-volatile memory that Android allocates to the operating system, APKs, and for individual apps. This space is not accessible except by the operating system or apps. So you can not find this text file from internal storage.
 
-    final externalDirectory = await getExternalStorageDirectory();
+    // final externalDirectory = await getExternalStorageDirectory();
     // /storage/emulated/0/Android/data/com.example.<app_name>/files
 
     // Application temporary directory: /data/user/0/{package_name}/cache
-    final tempDirectory = await getTemporaryDirectory();
+    // final tempDirectory = await getTemporaryDirectory();
     return directory.path;
   }
 
