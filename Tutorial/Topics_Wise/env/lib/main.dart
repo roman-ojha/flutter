@@ -71,8 +71,8 @@ import 'package:flutter/material.dart';
 // import 'Class_25_File/01_Read_and_Write_Files/01_Read_and_Write_Files.dart';
 // import "Class_25_File/02_File_Picker/02_File_Picker.dart";
 // import "Class_25_File/03_Saving_Files_to_Application_Folder_and_Gallery/03_Saving_Files_to_Application_Folder_and_Gallery.dart";
-import "Class_25_File/04_File_Manager/04_File_Manager.dart";
-import 'test.dart';
+// import "Class_25_File/04_File_Manager/04_File_Manager.dart";
+import "Class_26_Flutter_Other_Packages/01_URL_Launcher/01_URL_Launcher.dart";
 
 void main() async {
   // Class 21 -------------
@@ -213,6 +213,9 @@ class MyApp extends StatelessWidget {
     // );
     // return SavingFilesToApplicationFolderAndGallery();
     // return FileManagerClass();
-    return Test();
+    // return Test();
+
+    // Class 26 --------------------------
+    return FlutterURLLauncher();
   }
 }

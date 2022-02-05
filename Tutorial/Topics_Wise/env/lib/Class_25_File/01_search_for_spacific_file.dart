@@ -10,6 +10,8 @@
   import 'package:file_finder/file_finder.dart';
   import 'package:open_file/open_file.dart';
 
+  // firstly you have to use the permission handler to get the permission to access the storage
+
   var fileFinder = FileFinder();
     List _files = fileFinder.findAll("mp3", sort: false);
     OpenFile.open(_files[0].path);
