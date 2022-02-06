@@ -32,3 +32,32 @@
       DeviceOrientation.portraitUp,
     ]);
   }
+
+
+*) redirect to app from webbrowser (deep linking):
+  -> https://docs.flutter.dev/development/ui/navigation/deep-linking
+  -> on AndroidManifest.xml:
+     ->   <intent-filter android:label="flutter_web_auth">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="intent" android:host="flutterTut.com"/>
+            </intent-filter>
+  -> on Info.plist:
+    -> <key>FlutterDeepLinkingEnabled</key>
+        <true/>
+        <key>CFBundleURLTypes</key>
+        <array>
+            <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLName</key>
+            <string>flutterTut.com</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+            <string>intent</string>
+            </array>
+            </dict>
+        </array>
+
+  -> javascript:  window.location.replace("intent://flutterTut.com");

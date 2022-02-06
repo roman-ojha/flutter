@@ -56,5 +56,22 @@
 		</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 <string>This app needs to use Photos</string>
+
+<key>FlutterDeepLinkingEnabled</key>
+<true/>
+<key>CFBundleURLTypes</key>
+<array>
+    <dict>
+    <key>CFBundleTypeRole</key>
+    <string>Editor</string>
+    <key>CFBundleURLName</key>
+    <string>flutterTut.com</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+    <string>intent</string>
+    </array>
+    </dict>
+</array>
+
 </dict>
 </plist>
