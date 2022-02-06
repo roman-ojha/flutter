@@ -73,5 +73,22 @@
     </dict>
 </array>
 
+
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+  <key>CFBundleURLSchemes</key>
+  <array>
+    <string>fb702434784247238</string>
+  </array>
+  </dict>
+</array>
+<key>FacebookAppID</key>
+<string>702434784247238</string>
+<key>FacebookClientToken</key>
+<string>281ee7e7b387ef4f90019b045e2dc0a6</string>
+<key>FacebookDisplayName</key>
+<string>FlutterTut</string>
+
 </dict>
 </plist>

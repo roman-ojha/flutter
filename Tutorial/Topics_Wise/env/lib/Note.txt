@@ -61,3 +61,8 @@
         </array>
 
   -> javascript:  window.location.replace("intent://flutterTut.com");
+
+
+*) To change the name of application:
+  -> /android/app/build.gradle :   applicationId "com.example.env"
+  -> /android/app/src/main/AndroidManifest.xml :  package="com.example.env"> , android:label="env"

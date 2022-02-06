@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+    <string name="facebook_app_id">702434784247238</string>
+    <string name="fb_login_protocol_scheme">fb702434784247238</string>
+    <string name="facebook_client_token">281ee7e7b387ef4f90019b045e2dc0a6</string>
+    <string name="app_name">FlutterTut</string>
+</resources>
