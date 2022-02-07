@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 // importing custom widget
+// import 'Class_00_Other_Topics/02_Builder/01_Builder_Class/01_Builder_Class.dart';
+// import 'Class_00_Other_Topics/02_Builder/02_ListView_Builder/02_ListView_Builder.dart';
+// import 'Class_00_Other_Topics/03_Env/03_Env.dart';
+// import 'package:flutter_dotenv/flutter_dotenv.dart';
+// import 'Class_00_Other_Topics/03_Env/models/environment.dart';
 // import "Class_00_Other_Topics/02_Builder/03_FutureBuilder/03_FutureBuilder.dart";
 // import 'Class_01_Text_Widget/Text/TextWidget.dart';
 // import 'Class_01_Text_Widget/02_Rich_Text/02_Rich_Text.dart';
@@ -57,14 +62,11 @@ import 'package:flutter/material.dart';
 // import "Class_19_Passing_Data_Between_Wedget/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent.dart";
 // import 'Class_20_Auth_or_SignIn_from_Flutter/01_Google_Signing_using_Firebase/01_Google_Signing_using_Firebase.dart';
 // import "Class_20_Auth_or_SignIn_from_Flutter/03_Flutter_Authentication_with_MongoDB_Nodejs_and_Express/client/03_Flutter_Authentication_with_MongoDB_Nodejs_and_Express.dart";
+// import 'Class_20_Auth_or_SignIn_from_Flutter/04_Facebook_Login/04_Facebook_Login.dart';
+import "Class_20_Auth_or_SignIn_from_Flutter/05_Google_Auth_without_Firebase/05_Google_Auth_without_Firebase.dart";
 // import "Class_21_Flutter_Cache/01_Cache_Using_HIVE_DB/client/01_Cache_Using_HIVE_DB.dart";
 // import 'package:hive/hive.dart';
 // import 'package:hive_flutter/hive_flutter.dart';
-// import 'Class_00_Other_Topics/02_Builder/01_Builder_Class/01_Builder_Class.dart';
-// import 'Class_00_Other_Topics/02_Builder/02_ListView_Builder/02_ListView_Builder.dart';
-// import 'Class_00_Other_Topics/03_Env/03_Env.dart';
-// import 'package:flutter_dotenv/flutter_dotenv.dart';
-// import 'Class_00_Other_Topics/03_Env/models/environment.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
 // import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
 // import "package:env/Class_24_AlertDialog/01_AlertDialog_Class_and_Exiting_App/01_AlertDialog_Class.dart";
@@ -73,7 +75,6 @@ import 'package:flutter/material.dart';
 // import "Class_25_File/03_Saving_Files_to_Application_Folder_and_Gallery/03_Saving_Files_to_Application_Folder_and_Gallery.dart";
 // import "Class_25_File/04_File_Manager/04_File_Manager.dart";
 // import "Class_26_Flutter_Other_Packages/01_URL_Launcher/01_URL_Launcher.dart";
-import 'Class_20_Auth_or_SignIn_from_Flutter/04_Facebook_Login/04_Facebook_Login.dart';
 
 void main() async {
   // Class 21 -------------
@@ -189,7 +190,8 @@ class MyApp extends StatelessWidget {
     // Class 20 -----------------
     // return GoogleSignInUsingFirebase();
     // return FlutterAuthUsingNME();
-    return FacebookLogin();
+    // return FacebookLogin();
+    return GoogleAuthWithoutFirebase();
 
     // Class 21 ----------------
     // return HiveDatabase();
