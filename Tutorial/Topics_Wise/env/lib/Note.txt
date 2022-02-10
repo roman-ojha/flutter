@@ -6,6 +6,7 @@
 
 *) Command:
     -> flutter create <project_name>
+    -> flutter create --org com.yourdomain appname (create flutter app with package name)
     -> flutter devices (to see how many devices are connected which run flutter application)
     -> flutter doctor
     -> flutter run (to run the current project that we are in)
@@ -13,7 +14,13 @@
     -> flutter pub add <package_name> (to install third party packages)
     -> flutter pub remove (to remove the package from the flutter application)
     -> flutter --version (to check the version of flutter that is installed in your computer)
+    -> flutter upgrade (to upgrade to latest version of flutter)
 
+
+*) Github:
+  -> clone Github repo
+      -> git clone <url>
+      -> flutter pub get
 
 *) To get the total size of context:
         ->  MediaQuery.of(context).size.width
@@ -66,3 +73,6 @@
 *) To change the name of application:
   -> /android/app/build.gradle :   applicationId "com.example.env"
   -> /android/app/src/main/AndroidManifest.xml :  package="com.example.env"> , android:label="env"
+  -> /ios/Runner/info.plist :
+                    <key>CFBundleName</key>
+              <string>your_app_name</string>
