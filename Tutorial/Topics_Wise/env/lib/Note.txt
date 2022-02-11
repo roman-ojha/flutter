@@ -1,5 +1,4 @@
 
-
 *) To run localhost in emulator:
     -> use http://10.0.2.2:[port]/
 
@@ -15,15 +14,19 @@
     -> flutter pub remove (to remove the package from the flutter application)
     -> flutter --version (to check the version of flutter that is installed in your computer)
     -> flutter upgrade (to upgrade to latest version of flutter)
+    -> emulator -list-avds (to see the number of emulator device avilable)
+    -> emulator -avd <emulator_name> (to launch emulator from the terminal)
+    -> adb -s emulator-5554 emu kill (to kill emulator)
+
 
 
 *) Github:
   -> clone Github repo
-      -> git clone <url>
-      -> flutter pub get
+      -> git clone <url> (to get all the required project files and folder or repo from the remote git url)
+      -> flutter pub get (to get all the required package for the project)
 
 *) To get the total size of context:
-        ->  MediaQuery.of(context).size.width
+        ->  MediaQuery.of(context).size.width (to get the size of the application in the running device screen)
 
 
 *) to make Device landscape and potrait mode:

@@ -25,6 +25,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // ignore: unused_field
   static final customCacheManager = CacheManager(
     Config(
       // now here we can configure our own custom cahche manager
