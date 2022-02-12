@@ -19,7 +19,6 @@ import 'package:flutter/material.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/05_Baseline_Class/BaseLineClass.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/06_Expanded_Class/ExpandedClass.dart';
 // import 'Class_02_Layout_Widget/Multi_Child_Layout_Widget/04_ListView_Class/ListViewClassVertical.dart';
-// import 'Class_03_Assets_and_Image_and_Icons/01_Image_Class/ImageClass.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/07_SizedBox_Class/SizedBoxClass.dart';
 // import 'Class_02_Layout_Widget/Multi_Child_Layout_Widget/05_Table_Class/TableClass.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/08_ConstrainedBox_Class/ConstrainedBoxClass.dart';
@@ -28,6 +27,9 @@ import 'package:flutter/material.dart';
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/11_FractionallySizedBox/11_FractionallySizedBox.dart";
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/12_Positioned_Class/12_Positioned_Class.dart";
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/13_Flexible_Class/13_Flexible_Class.dart";
+// import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/09_Transform_Class/TransformClass.dart';
+import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/14_Opacity_and_AnimatedOpacity_Class/14_Opacity_and_AnimatedOpacity_Class.dart';
+// import 'Class_03_Assets_and_Image_and_Icons/01_Image_Class/ImageClass.dart';
 // import 'Class_04_Input/01_Form_Class/FormClass.dart';
 // import 'Class_04_Input/02_TextFormField_Class/TextFormFieldClass.dart';
 // import 'Class_03_Assets_and_Image_and_Icons/02_Icon_Class/IconClass.dart';
@@ -35,7 +37,6 @@ import 'package:flutter/material.dart';
 // import 'Class_05_Bar/02_TabBar_Class/TabBarClass.dart';
 // import 'Class_05_Bar/03_SnackBar_Class/SnackBarClass.dart';
 // import 'Class_05_Bar/04_BottomNavigationBar_Class/BottomNavigationBarClass.dart';
-// import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/09_Transform_Class/TransformClass.dart';
 // import 'Class_06_Navigation_and_Routing/01_First_Way/RoutePageFirstWay.dart';
 // import 'Class_06_Navigation_and_Routing/02_Second_Way/RoutePageSecondWay.dart';
 // import 'Class_06_Navigation_and_Routing/03_Third_Way/RoutePageThirdWay.dart';
@@ -66,7 +67,7 @@ import 'package:flutter/material.dart';
 // import "Class_20_Auth_or_SignIn_from_Flutter/05_Google_Auth_without_Firebase/05_Google_Auth_without_Firebase.dart";
 // import "Class_21_Flutter_Cache/01_Cache_Using_HIVE_DB/client/01_Cache_Using_HIVE_DB.dart";
 // import 'package:hive/hive.dart';
-import "Class_21_Flutter_Cache/02_Cached_Network_Image/02_Cached_Network_Image.dart";
+// import "Class_21_Flutter_Cache/02_Cached_Network_Image/02_Cached_Network_Image.dart";
 // import 'package:hive_flutter/hive_flutter.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
 // import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
@@ -124,6 +125,7 @@ class MyApp extends StatelessWidget {
     // return FractionallySizeboxClass();
     // return PositionedClass();
     // return FlexibleClass();
+    return OpacityClass();
 
     // Class 03-----------------
     // return ImageClass();
@@ -196,7 +198,7 @@ class MyApp extends StatelessWidget {
 
     // Class 21 ----------------
     // return HiveDatabase();
-    return CacheNetworkImageTut();
+    // return CacheNetworkImageTut();
 
     // Class 22 ------------------
     // return FlutterCustomClipperWidget();
