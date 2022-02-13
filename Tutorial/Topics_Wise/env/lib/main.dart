@@ -28,7 +28,7 @@ import 'package:flutter/material.dart';
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/12_Positioned_Class/12_Positioned_Class.dart";
 // import "Class_02_Layout_Widget/Single_Child_Layout_Widget/13_Flexible_Class/13_Flexible_Class.dart";
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/09_Transform_Class/TransformClass.dart';
-import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/14_Opacity_and_AnimatedOpacity_Class/14_Opacity_and_AnimatedOpacity_Class.dart';
+// import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/14_Opacity_and_AnimatedOpacity_Class/14_Opacity_and_AnimatedOpacity_Class.dart';
 // import 'Class_03_Assets_and_Image_and_Icons/01_Image_Class/ImageClass.dart';
 // import 'Class_04_Input/01_Form_Class/FormClass.dart';
 // import 'Class_04_Input/02_TextFormField_Class/TextFormFieldClass.dart';
@@ -58,6 +58,7 @@ import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/14_Opacity_and_Animate
 // import 'Class_15_Other_Widgets/03_Toast/01_Toast/01_Toast.dart';
 // import "Class_17_State_Management/01_setState_Method/setState.dart";
 // import 'Class_17_State_Management/02_Redux/02_Redux.dart';
+import 'Class_17_State_Management/03_Provider/03_Provider.dart';
 // import "Class_18_Notification/01_Local_Push_Notifications/01_Local_Push_Notifications.dart";
 // import "Class_05_Bar/05_Search_Bar/05_Search_Bar.dart";
 // import "Class_19_Passing_Data_Between_Wedget/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent.dart";
@@ -125,7 +126,7 @@ class MyApp extends StatelessWidget {
     // return FractionallySizeboxClass();
     // return PositionedClass();
     // return FlexibleClass();
-    return OpacityClass();
+    // return OpacityClass();
 
     // Class 03-----------------
     // return ImageClass();
@@ -181,6 +182,7 @@ class MyApp extends StatelessWidget {
     // Class 17 ------------------
     // return SetStateMng();
     // return FlutterRedux();
+    return ProviderStateManagement();
 
     // Class 18 ------------------
     // return MaterialApp(
