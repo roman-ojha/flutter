@@ -55,7 +55,11 @@
 			</dict>
 		</array>
 	<key>NSPhotoLibraryUsageDescription</key>
-<string>This app needs to use Photos</string>
+	<string>This app needs to use Photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>need a permission to access camera</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Used to capture audio for image picker plugin</string>
 
 <key>FlutterDeepLinkingEnabled</key>
 <true/>
@@ -89,6 +93,8 @@
 <string>281ee7e7b387ef4f90019b045e2dc0a6</string>
 <key>FacebookDisplayName</key>
 <string>FlutterTut</string>
+	
+
 
 </dict>
 </plist>

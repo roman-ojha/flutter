@@ -58,7 +58,7 @@ import 'package:flutter/material.dart';
 // import 'Class_15_Other_Widgets/03_Toast/01_Toast/01_Toast.dart';
 // import "Class_17_State_Management/01_setState_Method/setState.dart";
 // import 'Class_17_State_Management/02_Redux/02_Redux.dart';
-import 'Class_17_State_Management/03_Provider/03_Provider.dart';
+// import 'Class_17_State_Management/03_Provider/03_Provider.dart';
 // import "Class_18_Notification/01_Local_Push_Notifications/01_Local_Push_Notifications.dart";
 // import "Class_05_Bar/05_Search_Bar/05_Search_Bar.dart";
 // import "Class_19_Passing_Data_Between_Wedget/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent/01_Passing_Data_From_Parent_to_Child_and_Child_To_Parent.dart";
@@ -78,6 +78,7 @@ import 'Class_17_State_Management/03_Provider/03_Provider.dart';
 // import "Class_25_File/03_Saving_Files_to_Application_Folder_and_Gallery/03_Saving_Files_to_Application_Folder_and_Gallery.dart";
 // import "Class_25_File/04_File_Manager/04_File_Manager.dart";
 // import "Class_26_Flutter_Other_Packages/01_URL_Launcher/01_URL_Launcher.dart";
+import 'Class_27_Access/01_Image_Access_from_Camera_&_Gallery/01_Image_Access_from_Camera_&_Gallery.dart';
 
 void main() async {
   // Class 21 -------------
@@ -182,7 +183,7 @@ class MyApp extends StatelessWidget {
     // Class 17 ------------------
     // return SetStateMng();
     // return FlutterRedux();
-    return ProviderStateManagement();
+    // return ProviderStateManagement();
 
     // Class 18 ------------------
     // return MaterialApp(
@@ -227,5 +228,8 @@ class MyApp extends StatelessWidget {
 
     // Class 26 --------------------------
     // return FlutterURLLauncher();
+
+    // Class 27 --------------------------
+    return ImagePickerPackage();
   }
 }

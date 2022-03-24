@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:io';
 
 class ImageClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    File? image;
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -10,6 +12,8 @@ class ImageClass extends StatelessWidget {
         ),
         body: ListView(
           children: [
+            Image.file(image!),
+            //  to show the file image
             Image(
               image: NetworkImage(
                   'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg'),
