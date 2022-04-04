@@ -79,3 +79,8 @@
   -> /ios/Runner/info.plist :
                     <key>CFBundleName</key>
               <string>your_app_name</string>
+
+
+*) How to run flutter app Wireless
+  -> adb tcpip 5555 (write any available port)
+  -> adb connect 192.168.10.100:5555 (use ip provided by mobile device)

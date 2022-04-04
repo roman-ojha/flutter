@@ -79,6 +79,7 @@ import 'package:flutter/material.dart';
 // import "Class_25_File/04_File_Manager/04_File_Manager.dart";
 // import "Class_26_Flutter_Other_Packages/01_URL_Launcher/01_URL_Launcher.dart";
 import 'Class_27_Access/01_Image_Access_from_Camera_&_Gallery/01_Image_Access_from_Camera_&_Gallery.dart';
+import "Class_28_Socket/01_Web_socket_channel_package/01_Web_socket_channel_package.dart";
 
 void main() async {
   // Class 21 -------------
@@ -230,6 +231,9 @@ class MyApp extends StatelessWidget {
     // return FlutterURLLauncher();
 
     // Class 27 --------------------------
-    return ImagePickerPackage();
+    // return ImagePickerPackage();
+
+    // Class 28 -------------------------
+    return WebSocketChannelPackage();
   }
 }

@@ -59,6 +59,7 @@ dependencies:
   flutter_cache_manager: ^3.3.0
   provider: ^6.0.2
   image_picker: ^0.8.4+11
+  web_socket_channel: ^2.1.0
 
 dev_dependencies:
   flutter_test:
