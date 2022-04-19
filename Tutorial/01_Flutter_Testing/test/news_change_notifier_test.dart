@@ -63,17 +63,47 @@ void main() {
     // test Group group bunch of test together so that you can run then together as a group
     // if you are using some function in test then try to group those test
 
+    final articlesFromServices = [
+      Article(title: "Test 1", content: "Test 1 content"),
+      Article(title: "Test 2", content: "Test 2 content"),
+      Article(title: "Test 3", content: "Test 3 content")
+    ];
+
+    void arrangeNewsServicesReturns3Articles() {
+      // rather then calling this 'when' function ever time we will create the new function
+      when(() => mockNewsServices.getArticles())
+          .thenAnswer((_) async => articlesFromServices);
+    }
+
     test("gets articles using the NesServices", () async {
       // so we have not provided the 'getArticles' implementation in 'MockNewsServices' so we are using mocktain we can do it right here
       // so we are using mocktail we can provide the implementation particular to this exact method right here
 
-      when(() => mockNewsServices.getArticles()).thenAnswer((_) async => []);
+      // when(() => mockNewsServices.getArticles()).thenAnswer((_) async => []);
+      arrangeNewsServicesReturns3Articles();
       // show here whenever the 'MockNewsServices' 'getArticles' function get called we would answer
       await sut.getArticles();
       // NOTE: here is two different 'getArticles' function implementation in this project
       verify(() => {mockNewsServices.getArticles()}).called(1);
       // we just want to verify that does 'getArticle' function called for 1 time
     });
-    test('', () {});
+    test("""indicated loading of data, 
+    sets articles to the ones from the service,
+    indicates that data is not being loaded anymore""", () async {
+      // so this test will test that calling get article indicate loading of data
+      // and the loading flag should become true
+      arrangeNewsServicesReturns3Articles();
+      final future = sut.getArticles();
+      expect(sut.isLoading, true);
+      // how here we know that we add added article data and call the 'getArticle' function now while Loading it should be be true and after loading it should be false
+
+      // we will await future after 'isLoading' is true
+      await future;
+      // now we will expect that the articles data should be the exact same as that we had previously added
+      expect(sut.articles, articlesFromServices);
+
+      expect(sut.isLoading, false);
+      // now after data being loaded 'isLoading' should be false
+    });
   });
 }
