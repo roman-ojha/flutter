@@ -1,0 +1,18 @@
+*) What is testing?
+    -> Ensuring your app does exactly what it should do
+        -> Testing for regressions
+    -> Tow main types:
+        1) Manual Testing
+        2) Automated
+
+*) Tests in Flutter:
+    1) Unit Tests:
+        -> For all code beside the UI Widgets
+        -> One set of Unit tests usually tests a single class
+    2) Widget Test:
+        -> For testing a single Widget
+    3) Integration tests:
+        -> For testing large parts of the app for the user perspective
+        -> this also work with UI widget
+        -> We can see what is happening through UI
+        -> run on Emulator
