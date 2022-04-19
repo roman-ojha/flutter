@@ -1,0 +1,30 @@
+*) Bloc Concept:
+    1) Stream:
+        -> https://youtu.be/THCkkQ-V1-8?t=923
+        -> Stream is a foundation which transport some data from the sender to the receiver the transported data is asynchronous it means that receiver doesn't know he will receive the data, receiver will wait and listen to it
+    2) Cubit:
+        -> Cubit is the minimum version of a bloc
+        -> Cubit is a special kind of Stream Component which is based on some function 
+        -> Q1: What is a initial State of the counter?
+            -> The initial Counter value is Zero(0)
+        -> Q2: What are the possible Interactions with the app?
+            -> User con click +(plus) or -(minus) Button
+        -> Q3: What are the function from inside the cubit?
+            -> We'll have 2 Function: 
+                -> increment(){
+                    state++;
+                }
+                -> decrement(){
+                    state--;
+                }
+        -> Example: './main-cubit.dart'
+        -> Compare to bloc cubit function are now part of a stream but rather a pre defined stand alone list of what can be done inside a cubit
+        -> The only stream exist in the cubit is a stream of emit state
+        -> So, Cubit is a component which is based on some functions that are not part of a stream, emit a stream of state which modify the UI and also receive a stream of events
+    3) Bloc:
+        -> Bloc extends Cubit
+
+Q1) Bloc VS Cubit?
+    -> when we are performing some simple functionality like increment and decrement where we are not even using Stream in that case we might need to use 'Cubit'
+    -> But when you need some kind of task like searching for a weather location and user is typing and need to dispatch the event only after some period of time 
+        -> https://youtu.be/THCkkQ-V1-8?t=1659

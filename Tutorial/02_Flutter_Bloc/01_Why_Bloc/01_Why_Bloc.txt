@@ -1,0 +1,10 @@
+*) Why Bloc?
+    -> Business Logic Component
+    -> Bloc is a Design Patter create by google to help separate business logic from the presentation layer and enable developer to reuse code more easily
+    -> There is also the state management library which help developer to implement bloc design pattern in there flutter application
+
+*) What are the Advantages?
+    -> Understand easily what's happening inside you app
+    -> More Structured code, Easier to maintain and test
+    -> Know & Understand every state of you app
+    -> Work on a Single, Stable, Popular and Effective Bloc CodeBase
