@@ -16,6 +16,7 @@ class _NewsPageState extends State<NewsPage> {
     super.initState();
     Future.microtask(
       () => context.read<NewsChangeNotifier>().getArticles(),
+      // now here we are fetching all the data in the initState through 'getArticle()' function
     );
   }
 
@@ -26,6 +27,7 @@ class _NewsPageState extends State<NewsPage> {
         title: const Text('News'),
       ),
       body: Consumer<NewsChangeNotifier>(
+        // now here we are accessing those 'NewsChangeNotifier' data
         builder: (context, notifier, child) {
           if (notifier.isLoading) {
             return const Center(

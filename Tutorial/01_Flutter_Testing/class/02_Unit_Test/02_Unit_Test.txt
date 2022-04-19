@@ -1,0 +1,15 @@
+-> dependencies:
+    1) Provider:
+        -> for state management
+    2) flutter_lorem:
+        -> to provide lorem text
+    3) integration_test:
+        -> writing integration test 
+    4) flutter_test:
+        -> by default writing test in flutter
+    5) mocktail:
+        -> 
+
+=> Testing Process:
+    -> we will going to test './lib/news_change_notifier.dart'
+=> now for the test we have to create file inside the 'test' folder called 'news_change_notifier_test.dart'

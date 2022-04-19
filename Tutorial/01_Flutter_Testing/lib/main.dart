@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'News App',
       home: ChangeNotifierProvider(
+        // we will provide the Article data here
         create: (_) => NewsChangeNotifier(NewsService()),
         child: NewsPage(),
       ),

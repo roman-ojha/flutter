@@ -11,9 +11,11 @@ class NewsService {
       content: lorem(paragraphs: 10, words: 500),
     ),
   );
+  // here we are generating random text article
 
   Future<List<Article>> getArticles() async {
     await Future.delayed(const Duration(seconds: 1));
+    // and we will delayed for certain time to imitate api data
     return _articles;
   }
 }
