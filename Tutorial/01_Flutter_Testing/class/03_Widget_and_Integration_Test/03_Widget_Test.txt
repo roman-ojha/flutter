@@ -7,4 +7,4 @@
     -> and using integration test we can test the performance of app as well
 
 *) Setup:
-    -> Now we are going to create file under the test folder
+    -> Now we are going to create file under the test folder called 'news_page_test.dart'
