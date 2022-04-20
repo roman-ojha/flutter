@@ -34,3 +34,17 @@
     -> BlocProvider handles the closing part of blocs automatically
     -> https://youtu.be/THCkkQ-V1-8?t=2105
     -> 
+
+*) BlocBuilder:
+    -> BlocBuilder is a Widget that helps Re-Building the UI based on bloc State Change
+    -> NOTE that Rebuilding a Large Chunk of the UI may Require a Lot of Time to Compute so that why a good practice is to wrap the exact part of UI that you want to rebuild inside bloc builder 
+    -> BlocBuilder<BlocA,BlocAState>{
+        builder:(context,state){
+            // return widget here based on BlocA's state
+        }
+        buildWhen:(previousState,state){
+            // return true/false to determine where or not to build the widget with state
+            // 'state' is the current state
+            // Ex: in this project if (previousState.value < state.value) return false 
+        }
+    }
