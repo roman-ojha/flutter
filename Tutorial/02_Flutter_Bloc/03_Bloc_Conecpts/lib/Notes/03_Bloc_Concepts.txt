@@ -1,0 +1,36 @@
+*) Flutter Bloc Concepts:
+    -> Some Vital Flutter concepts to get going (widget, widget tree)
+        1) BlocProvider
+        2) BlocBuilder
+        3) BlocListener
+        4) BlocConsumer
+        5) MultiBlocListener, MultiBlocProvider, MultiRepositoryProvider
+
+=> In Flutter Bloc concepts every concept is A Widget
+
+*) Widget in flutter:
+    -> Classes
+
+*) BlocProvider:
+    -> So there is no any CubitProvider because cubit is a small part of the bloc 'BlocProvider' will work same for the Cubit as well
+    -> Hence, every concept Above Define are available for both Bloc and Cubit
+    -> BlocProvider is a Flutter widget which create and provide a bloc to all of it's children
+    -> BlocProvider will Provide a Single Instance of a Bloc to the Subtree Blow
+    -> BlocProvider(
+        create:(BuildContext context)=> BlocA();
+        child: ChildA(),
+    )
+        -> BuildContext is a context in which a Specific Widget is build
+        -> here 'BlocA' is the Instance that is provided by the bloc to the subtree
+    -> To Access:
+        -> BlocProvider.of<BlocA>(context); or
+        -> context.bloc<BlocA)()
+    -> by Default, BlocProvider create the bloc lazily to override this behavior:
+        -> BlocProvider(
+            lazy:false
+            create:(BuildContext context)=> BlocA();
+            child: ChildA(),
+        )
+    -> BlocProvider handles the closing part of blocs automatically
+    -> https://youtu.be/THCkkQ-V1-8?t=2105
+    -> 
