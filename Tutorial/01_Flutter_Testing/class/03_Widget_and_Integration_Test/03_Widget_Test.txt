@@ -6,5 +6,8 @@
     -> another different is Widget test will run in a simulated interface we don't see it but in integration test we can see with emulator what is happening
     -> and using integration test we can test the performance of app as well
 
-*) Setup:
+*) Widget Test Setup:
     -> Now we are going to create file under the test folder called 'news_page_test.dart'
+
+*) Integration Test Setup:
+    -> Now  we will going to create another folder for integration test called 'integration-test' and create file 'app_test.dart'
