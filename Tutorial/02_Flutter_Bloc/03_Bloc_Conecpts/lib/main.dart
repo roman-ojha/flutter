@@ -43,56 +43,80 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            BlocBuilder<CounterCubit, CounterState>(
-              builder: (context, state) {
-                if (state.counterValue < 0) {
-                  return Text(
-                    'BRR, Negative' + state.counterValue.toString(),
-                    style: Theme.of(context).textTheme.headline4,
-                  );
-                } else if (state.counterValue % 2 == 0) {
-                  return Text(
-                    'YAH' + state.counterValue.toString(),
-                    style: Theme.of(context).textTheme.headline4,
-                  );
-                } else {
-                  return Text(
-                    state.counterValue.toString(),
-                    style: Theme.of(context).textTheme.headline4,
-                  );
-                }
-              },
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                FloatingActionButton(
-                  onPressed: () {
-                    // now here we are trying to decrement the counter state but how can we be able to access the 'CounterCubit' instance we can be able to access like :
-                    BlocProvider.of<CounterCubit>(context).decrement();
-                    // or
-                    // context.bloc<CounterCubit>().decrement();
-                  },
-                  tooltip: "Decrement",
-                  child: const Icon(Icons.remove),
+      body: BlocListener<CounterCubit, CounterState>(
+        // we will use the BlocListener which will listen about does state changed or not when state will change then it will run the listener function inside that function we are showing snackBar according to the state
+        listener: (context, state) {
+          if (state.wasIncremented == true) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text("Increment"),
+                duration: Duration(
+                  microseconds: 200,
                 ),
-                FloatingActionButton(
-                  onPressed: () {
-                    BlocProvider.of<CounterCubit>(context).increment();
-                  },
-                  tooltip: "Increment",
-                  child: const Icon(Icons.add),
+              ),
+            );
+          } else {
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text("Decrement"),
+                duration: Duration(
+                  microseconds: 200,
                 ),
-              ],
-            )
-          ],
+              ),
+            );
+          }
+        },
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text(
+                'You have pushed the button this many times:',
+              ),
+              BlocBuilder<CounterCubit, CounterState>(
+                builder: (context, state) {
+                  if (state.counterValue < 0) {
+                    return Text(
+                      'BRR, Negative' + state.counterValue.toString(),
+                      style: Theme.of(context).textTheme.headline4,
+                    );
+                  } else if (state.counterValue % 2 == 0) {
+                    return Text(
+                      'YAH' + state.counterValue.toString(),
+                      style: Theme.of(context).textTheme.headline4,
+                    );
+                  } else {
+                    return Text(
+                      state.counterValue.toString(),
+                      style: Theme.of(context).textTheme.headline4,
+                    );
+                  }
+                },
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FloatingActionButton(
+                    onPressed: () {
+                      // now here we are trying to decrement the counter state but how can we be able to access the 'CounterCubit' instance we can be able to access like :
+                      BlocProvider.of<CounterCubit>(context).decrement();
+                      // or
+                      // context.bloc<CounterCubit>().decrement();
+                    },
+                    tooltip: "Decrement",
+                    child: const Icon(Icons.remove),
+                  ),
+                  FloatingActionButton(
+                    onPressed: () {
+                      BlocProvider.of<CounterCubit>(context).increment();
+                    },
+                    tooltip: "Increment",
+                    child: const Icon(Icons.add),
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

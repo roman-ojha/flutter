@@ -48,3 +48,15 @@
             // Ex: in this project if (previousState.value < state.value) return false 
         }
     }
+
+*) BlocListener:
+    -> The builder function can be called multiple times.
+    -> Navigating to another screen can't be able to do inside the BlocBuilder
+    -> BlocListener is the widget which listen to any state change 
+    -> instead of rebuilding the widget as BlocBuilder did with the builder function BlocListener takes simple void function called 'listener' which is called only one per state not Including the initial state
+    -> BlocListener<BlocA,BlocAState>(
+        listener:(context,state){
+            // Do stuff here based on BlocA's state
+        },
+        child: Container(),
+    )
