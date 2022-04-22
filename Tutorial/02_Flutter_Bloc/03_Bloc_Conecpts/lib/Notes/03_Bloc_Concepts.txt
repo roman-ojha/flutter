@@ -60,3 +60,7 @@
         },
         child: Container(),
     )
+
+*) BlocConsumer:
+    -> BlocConsumer is a widget which combine both BlocListener and BlocBuilder into a single widget
+    -> This had been implement inside the 'bloc_consumer.dart'

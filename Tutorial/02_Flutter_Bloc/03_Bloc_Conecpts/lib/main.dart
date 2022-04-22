@@ -1,5 +1,4 @@
-import 'dart:developer';
-
+import 'package:blocconcepts/bloc_consumer.dart';
 import 'package:blocconcepts/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -114,6 +113,23 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Icon(Icons.add),
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const BlocConsumerWidget(title: "Consumer"),
+                    ),
+                  );
+                },
+                child: const Text(
+                  "BlocConsumer",
+                  style: TextStyle(fontSize: 25.0),
+                ),
               )
             ],
           ),
