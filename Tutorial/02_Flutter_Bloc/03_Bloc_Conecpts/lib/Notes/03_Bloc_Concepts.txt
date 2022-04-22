@@ -64,3 +64,11 @@
 *) BlocConsumer:
     -> BlocConsumer is a widget which combine both BlocListener and BlocBuilder into a single widget
     -> This had been implement inside the 'bloc_consumer.dart'
+
+*) RepositoryProvider:
+    -> RepositoryProvider is same widget as BlocProvider The only different is It provide the single Repository Class instance instead of Single Bloc Instance
+    -> Repository is a Class which have the main function which make the flutter communicate with the outer data layer Like: Internet, API, Databases
+
+*) MultiBlocProvider,MultiBlocListener,MultiRepositoryProvider:
+    -> What if you have 100's of bloc for you application and need to provide them into the application
+    -> instead of taking one bloc or cubit or repository they can take as many bloc
