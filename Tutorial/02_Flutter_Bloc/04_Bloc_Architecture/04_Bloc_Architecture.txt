@@ -1,0 +1,48 @@
+*) What is BlocArchitecture?
+    -> BlocArchitecture is a simple Architecture which have Bloc in it's center
+    -> in Flutter Bloc is a Design Pattern, State Management Library, Architecture Pattern
+    -> so we have completed the Life cycle for interaction of UI and Bloc but if we will need the data form the Internet or if we have to request the data to the API and we will get the response Back The Life Cycle could be like:
+        -> UI -(event)-> Bloc -(request)-> Data(API) -(response)-> Bloc -(state)-> UI
+
+*) DataLayer:
+    -> DataLayer have the responsibility of retrieving and manipulating data of different sources Source could be Database, API, Other async sources
+    -> DataLayer is Categorized into 3 Layer:
+        1) The Models
+            -> A blue Print to a data the application will work with
+            -> Ex: for Weather Application the data could be store like this:
+                -> class Weather{
+                    float temperature;
+                    List<Float> forecast;
+                    List<Icon> icons;
+                    float windSpeed;
+                }
+            -> NOTE: Model of the Application should be Independent of API sources or Model of the application should be generic and should apply to universal API sources, it means that different api sources could have different data model but your application should store those data inside the one data model
+        2) The Data Providers
+            -> The data provider responsibility to provide a Row Data to it's successor(The Repository)
+            -> Data provider is an API for you own application 
+            -> It means that The data provider contain the class which will provide the data to the application from the direct API sources
+        3) The Repository
+            -> the Repository is a Wrapper around one or more data Providers
+            -> It is the part of data layer which Bloc Communicate with
+
+*) The Business Logic Layer:
+    -> Bloc
+
+*) The Presentation Layer:
+    -> UI
+
+*) BlocArchitecture Folder Structure:
+    -> business_logic
+        -> bloc
+        -> cubits
+    -> data
+        -> dataProviders
+        -> models
+        -> repository
+    -> presentation
+        -> animations
+        -> pages
+        -> screens
+        -> widgets
+
+=> BlocArchitecture Workflow: https://youtu.be/THCkkQ-V1-8?t=3994
