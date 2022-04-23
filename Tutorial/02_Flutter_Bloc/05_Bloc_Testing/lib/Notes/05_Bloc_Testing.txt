@@ -1,0 +1,6 @@
+    -> flutter pub add test
+    -> flutter pub add bloc_test
+
+=> Test directory './test'
+-> NOTE: try to create the exact folder structure for testing as the way that './lib' structure have
+
