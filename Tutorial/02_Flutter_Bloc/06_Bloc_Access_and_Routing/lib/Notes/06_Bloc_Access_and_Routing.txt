@@ -22,3 +22,19 @@
                 -> Navigating With A Route Name
                 -> Route name and their associated Screens are setup up inside a separate onGenerateRoute Function
                 -> Suitable for Large Application
+    *) Anonymous Routing:
+        -> BlocProvider.value() will provide the bloc/cubit instance to multiple Route
+        -> BlocProvider.value(
+            value:existingBloc,
+        )
+            -> BlocProvider.value take the existing instance of a bloc/cubit and provide it to further to child widget
+            -> 
+    *) Named Routing:
+        -> Named Route Access provide an Existing Instance of Bloc/cubit to Multiple Screen navigating with Name Routes
+        -> It's Recommended to decide on a Navigation Style Before starting Developing the app, since refactoring the code afterward can get pretty difficult to execute.
+        -> we will route use this route on 'MaterialApp' widget
+    *) Generated Route:
+        -> Generated route is Similar to Named Route, thus having the same Advantages
+        -> Some of the differences includes Integrating the entire Navigation Feature inside on file and function
+        -> This Unclutters the main.dart file making the entire code More visible and easier to maintain and understand
+    

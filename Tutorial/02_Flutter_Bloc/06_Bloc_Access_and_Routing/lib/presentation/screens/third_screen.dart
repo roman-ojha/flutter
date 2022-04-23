@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import '../../logic/cubit/counter_cubit.dart';
 import 'second_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key, required this.title, required this.color})
+class ThirdScreen extends StatefulWidget {
+  const ThirdScreen({Key? key, required this.title, required this.color})
       : super(key: key);
   final String title;
   final Color color;
 
   @override
-  State<HomeScreen> createState() => _MyHomeScreen();
+  State<ThirdScreen> createState() => _MyThirdScreen();
 }
 
-class _MyHomeScreen extends State<HomeScreen> {
+class _MyThirdScreen extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: widget.color,
       ),
       body: BlocListener<CounterCubit, CounterState>(
         listener: (context, state) {
@@ -74,6 +74,7 @@ class _MyHomeScreen extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   FloatingActionButton(
+                    backgroundColor: widget.color,
                     onPressed: () {
                       BlocProvider.of<CounterCubit>(context).decrement();
                     },
@@ -81,6 +82,7 @@ class _MyHomeScreen extends State<HomeScreen> {
                     child: const Icon(Icons.remove),
                   ),
                   FloatingActionButton(
+                    backgroundColor: widget.color,
                     onPressed: () {
                       BlocProvider.of<CounterCubit>(context).increment();
                     },
@@ -88,66 +90,6 @@ class _MyHomeScreen extends State<HomeScreen> {
                     child: const Icon(Icons.add),
                   ),
                 ],
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              MaterialButton(
-                color: Colors.redAccent,
-                onPressed: () {
-                  Navigator.of(context).push(
-                    // Here we are Routing through the Anonymous Routing
-                    MaterialPageRoute(
-                      builder: (newContext) => BlocProvider.value(
-                        value: BlocProvider.of<CounterCubit>(context),
-                        // 'BlocProvider.value()' take the existing instance of bloc/cubit and provide it to further to next screen
-                        // NOTE that we have to provide the 'context' to the 'BlocProvider' not the 'newContext'
-                        child: const SecondScreen(
-                          // now here we have to provide the 'blocProvider.value' to provide bloc/cubit instance to the Navigating screen
-                          title: "Second Screen Anonymously",
-                          color: Colors.redAccent,
-                        ),
-                      ),
-                    ),
-                  );
-                },
-                child: const Text(
-                  "Go To Second Screen Anonymously",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              MaterialButton(
-                color: Colors.redAccent,
-                onPressed: () {
-                  // routing using Name routing
-                  Navigator.of(context).pushNamed("/second");
-                },
-                child: const Text(
-                  "Go To Second Screen with Named Route",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              MaterialButton(
-                color: Colors.greenAccent,
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/third');
-                },
-                child: const Text(
-                  "Go To Third Screen with Named Route",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
               ),
             ],
           ),
