@@ -51,6 +51,10 @@ void main() {
     sut = NewsChangeNotifier(mockNewsServices);
     // now we are initializing the 'NewsChangeNotifier' using 'Mocktail' package
   });
+  
+  tearDown((){
+    // this function will get called after test
+  })
 
   test("initial value are correct", () {
     // now here we will check if the initial value are correct or not like '_isLoading=false'
