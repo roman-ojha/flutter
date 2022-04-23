@@ -1,0 +1,24 @@
+*) Bloc Access:
+    -> here we will know how we can access bloc instance across various scenario : BlocProvider() vs BlocProvider.value()
+    -> previously we had learned about how we can provide single bloc instance to the widget tree of a single page by using 'BlocProvider' there we had provided locally in single screen
+    -> what if we want to provide to another screen to multiple screen or even globally
+
+*) Local Access:
+    -> it's called local access because the instance will only be available locally inside that screen
+
+*) Route Access:
+    -> providing an instance of a bloc/cubit to Multiple Screens is called as Route Access
+    -> To understand Route Access we need to understand Flutter Routing
+        => Flutter Routing Options:
+            -> Anonymous Routing
+                -> Routing without a RouteName
+                -> Only the screen are used to navigate
+                -> Suitable for Small Application
+            -> Named Routing
+                -> Navigating With a Routing Name
+                -> Route Names and there associated Screens are setup insides parameter of MaterialApp widget
+                -> Suitable for Small-Medium Application
+            -> Generated Routing
+                -> Navigating With A Route Name
+                -> Route name and their associated Screens are setup up inside a separate onGenerateRoute Function
+                -> Suitable for Large Application
