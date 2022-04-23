@@ -149,6 +149,51 @@ class _MyHomeScreen extends State<HomeScreen> {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 24,
+              ),
+              MaterialButton(
+                color: Colors.blueAccent,
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/generated');
+                },
+                child: const Text(
+                  "Go To Home Screen with Generated Route",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              MaterialButton(
+                color: Colors.redAccent,
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/second/generated');
+                },
+                child: const Text(
+                  "Go To Second Screen with Generated Route",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 24,
+              ),
+              MaterialButton(
+                color: Colors.greenAccent,
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/third/generated');
+                },
+                child: const Text(
+                  "Go To Third Screen with Generated Route",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ],
           ),
         ),

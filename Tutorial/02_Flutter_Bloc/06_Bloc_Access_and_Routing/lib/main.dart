@@ -1,4 +1,5 @@
 import 'package:blocconcepts/logic/cubit/counter_cubit.dart';
+import 'package:blocconcepts/presentation/router/app_router.dart';
 import 'package:blocconcepts/presentation/screens/second_screen.dart';
 import 'package:blocconcepts/presentation/screens/third_screen.dart';
 import 'package:flutter/material.dart';
@@ -19,11 +20,19 @@ class _MyAppState extends State<MyApp> {
 
   // because we have to provide the same "CounterCubit" to multiple route we have to create the variable which will store the single instance and will provide to multiple route
 
+  // For Generated Route:
+  // we have to create AppRouter Class Instance
+  final AppRouter _appRouter = AppRouter();
+
   @override
   void dispose() {
-    super.dispose();
     _counterCubit.close();
     // NOTE: 'BlocProvider.value' wouldn't close the provider bloc automatically we will need to close manually where we create it, it means that in 'dispose' method
+
+    // For Generated route:
+    _appRouter.dispose();
+
+    super.dispose();
   }
 
   @override
@@ -61,6 +70,9 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
       },
+      // Generate Route:
+      // for generate route we don't need 'route:' parameter but for tutorial purposes we will keep it
+      onGenerateRoute: _appRouter.onGenerateroute,
     );
   }
 }

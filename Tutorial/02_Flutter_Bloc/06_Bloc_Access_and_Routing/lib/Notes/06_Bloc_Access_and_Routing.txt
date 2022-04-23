@@ -37,4 +37,19 @@
         -> Generated route is Similar to Named Route, thus having the same Advantages
         -> Some of the differences includes Integrating the entire Navigation Feature inside on file and function
         -> This Unclutters the main.dart file making the entire code More visible and easier to maintain and understand
+        -> we will create the separate 'router' folder inside presentation
+
+*) Global Access:
+    -> What if we need to access bloc/cubit instance to 100's of the screen in that case we need to use global access
+    -> NOTE: if we will wrap 'MaterialApp' with 'BlocProvider' widget this will provide the same instance of bloc/cubit to all the screen
+    ->  @override
+        Widget build(BuildContext context) {
+            return BlocProvider<CounterCubit>(
+            create: (context) => CounterCubit(),
+            child: MaterialApp(
+                title: 'Flutter Demo',
+                theme: ThemeData(
+                primarySwatch: Colors.blue,
+                ),
+            );
     
