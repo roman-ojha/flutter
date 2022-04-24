@@ -1,0 +1,29 @@
+=> Inside you application after some time of working there will be more then one bloc/cubit in you application in that case those bloc/cubit need's to communicate with each other
+-> One bloc/cubit may do something in response to state change of another bloc/cubit
+
+*) How can a Bloc/Cubit Listen to another Bloc/Cubit?
+    -> we will perform this example through Whenever the Phone connected to Wifi the counter will be incremented by 1 and when the phone is connected to mobile data counter will be decremented by 1
+    -> there could be two possible Scenario
+        1) Stream Subscription
+            -> It is a foundation object from which you can listen to a stream
+            -> to we can initialize the streamSubscription inside the bloc/cubit constructor
+            -> BlocB(){
+                streamSubscription = blocA.listen();
+            }
+            -> NOTE that you have create the streamSubscription manually you have to close it:
+                -> @override
+                close(){
+                    internetStreamSubscription.cancel();
+                }
+            -> how to Listen:
+                -> CounterCubit{
+                    internetStreamSubscription = internetCubit.listen(
+                        (internetState){
+                            if(internetStateIsWifiOn) incremented();
+                        }
+                    )
+                }
+            -> to check for internet connection we will need:
+                -> flutter pub add connectivity_plus
+            -> 
+        2) Bloc Listener
