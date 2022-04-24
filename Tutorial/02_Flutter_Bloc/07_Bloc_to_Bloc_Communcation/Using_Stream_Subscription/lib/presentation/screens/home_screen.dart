@@ -1,3 +1,5 @@
+import 'package:blocconcepts/constants/enum.dart';
+import 'package:blocconcepts/logic/cubit/internet_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../logic/cubit/counter_cubit.dart';
@@ -22,9 +24,49 @@ class _MyHomeScreen extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
+            BlocBuilder<InternetCubit, InternetState>(
+                builder: (context, state) {
+              // now here we will also add a blocBuilder which will build the text according to the current internet state
+              if (state is InternetConnected &&
+                  state.connectionType == ConnectionType.wifi) {
+                return Text(
+                  "Wi-Fi",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3!
+                      .copyWith(color: Colors.green),
+                );
+              } else if (state is InternetConnected &&
+                  state.connectionType == ConnectionType.mobile) {
+                return Text(
+                  "Mobile Data",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3!
+                      .copyWith(color: Colors.green),
+                );
+              } else if (state is InternetConnected &&
+                  state.connectionType == ConnectionType.ethernet) {
+                return Text(
+                  "Ethernet",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3!
+                      .copyWith(color: Colors.green),
+                );
+              } else if (state is InternetDisconnected) {
+                return Text(
+                  "Disconnected",
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline3!
+                      .copyWith(color: Colors.green),
+                );
+              } else {
+                return const CircularProgressIndicator();
+              }
+              // if internet is loading
+            }),
             BlocConsumer<CounterCubit, CounterState>(
               listener: (context, state) {
                 if (state.wasIncremented == true) {
