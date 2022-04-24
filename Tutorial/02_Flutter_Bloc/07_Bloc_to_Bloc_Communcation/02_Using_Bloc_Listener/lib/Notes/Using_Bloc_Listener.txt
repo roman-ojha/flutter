@@ -1,0 +1,13 @@
+*) BlocListener:
+    -> Previously we use BlocListener in response of bloc/cubit state change
+    -> Pros:
+        -> it take care Internally of all StreamSubscription
+        -> No need to take care of stream/memory leaks anymore 
+    -> Cons:
+        -> The UI may get cluttered & hard to read with multiple BlocListeners
+
+*) Why BlocListener over StreamSubscription?
+    -> you don't have to StreamSubscription any more
+    -> bloc/cubit manage it's StreamSubscription internally
+
+-> so we will listen to the 'InternetCubit' state change in 'home_screen.dart'
