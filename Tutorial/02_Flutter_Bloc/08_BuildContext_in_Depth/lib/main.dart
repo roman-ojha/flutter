@@ -10,10 +10,6 @@ void main() {
   runApp(MyApp(appRouter: AppRouter(), connectivity: Connectivity()));
 }
 
-/*
-  -> 
-*/
-
 class MyApp extends StatelessWidget {
   final AppRouter appRouter;
   final Connectivity connectivity;
@@ -25,10 +21,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        // Now we need 'InternetCubit' & 'CounterCubit' unique instances
         BlocProvider<InternetCubit>(
-            create: (context) => InternetCubit(connectivity: connectivity)),
-        BlocProvider<CounterCubit>(create: (context) => CounterCubit()),
+            create: (internetCubitContext) =>
+                // here we can see that 'internetCubitContext' is the new context instance for InternetCubit bloc provider
+                InternetCubit(connectivity: connectivity)),
+        BlocProvider<CounterCubit>(
+            create: (counterCubitContext) => CounterCubit()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

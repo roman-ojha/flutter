@@ -1,0 +1,25 @@
+*) BuildContext:
+    -> BuildContext is a tool which handle location of widget inside the widget tree
+    -> Must know that not all widget have a user accessible context by default:
+        -> EX: Text()
+            -> Text widget build in context which is anonymous by default
+    -> Every tree must have root node, a node where everything start and develop from
+    -> Every widget inside the flutter have a build() function which will require a 'BuildContext' instance inOrder for it to build most importantly place inside a widget tree
+    -> BuildContext of a widget only keep track of it's direct parent
+    *) MultiBlocProvider BuildContext:
+        -> MultiBlocProvider will nest each Bloc provider from the list
+        -> It means that in the order that we have provided the Bloc in MultiBlocProvider the widget tree will get created
+
+    *) Navigator:
+        -> Navigator.of(context).pushNamed(...);
+            -> Navigator.of : Search for the closest Navigator instance inside the widget tree starting from this exact passed 'context' instance and after the navigator widget instance is found, as the new screen inside it's own context
+    *) Can we transform anonymous context into a normal accessible one?
+        -> Yes we can and this is done by wrapping widget inside 'builder' widget
+    
+    EX: 1) BlocProvider.of(context)
+            -> Search for the closest BlocProvider widget inside the widget tree, starting from the assigned Context BuildContext
+       2) BlocProvider.of<Type>(context)
+            -> Since flutter might find more than 1 BlocProvider we also need to specify The Type of the specific one we're trying to reach, between angle brackets
+    
+    => So if we will wrap MaterialApp widget which contain the Navigator widget with BlocProvider then it means that when we will navigate to the another screen the another screen will also find the same instance that we had provided for the MaterialApp widget
+    => You can't access Bloc/Cubit instance from the same context in which it was provided
