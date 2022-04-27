@@ -6,4 +6,5 @@
         -> it must be the Local Storage of the phone
     *) How it store data?
         -> in json formate
-    -> for this application we will going to store data of 'CounterState'
+        -> for that it use 'hive' package
+    -> for this application we will going to store data of 'CounterState' so we will write some code inside 'main.dart', 'counter_cubit.dart', 'counter_state.dart'

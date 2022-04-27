@@ -7,7 +7,7 @@ part 'settings_state.dart';
 class SettingsCubit extends Cubit<SettingsState> {
   SettingsCubit()
       : super(
-          SettingsState(
+          const SettingsState(
             appNotifications: false,
             emailNotifications: false,
           ),

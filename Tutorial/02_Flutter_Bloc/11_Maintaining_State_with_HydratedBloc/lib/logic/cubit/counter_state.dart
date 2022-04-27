@@ -9,6 +9,7 @@ class CounterState {
     required this.wasIncremented,
   });
 
+  // so dart doesn't understand json format so to make it understandable we have to decode it :
   Map<String, dynamic> toMap() {
     return {
       'counterValue': counterValue,
@@ -31,5 +32,4 @@ class CounterState {
 
   factory CounterState.fromJson(String source) =>
       CounterState.fromMap(json.decode(source));
-  // so dart doesn't understand json format so to make it understandable we have to decode it
 }
