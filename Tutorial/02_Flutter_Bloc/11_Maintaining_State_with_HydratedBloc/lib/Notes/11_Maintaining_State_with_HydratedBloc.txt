@@ -1,0 +1,9 @@
+=> So when we will change the bloc state in the application and if we will restart the application then the state of the application will set the initialState
+
+*) Hydrated_Bloc:
+    -> State Maintaining solution for Bloc Library
+    *) Where it store data?
+        -> it must be the Local Storage of the phone
+    *) How it store data?
+        -> in json formate
+    -> for this application we will going to store data of 'CounterState'
