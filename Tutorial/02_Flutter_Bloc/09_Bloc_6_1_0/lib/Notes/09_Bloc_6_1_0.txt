@@ -1,0 +1,19 @@
+*) Bloc version 6.0.0:
+    -> 
+
+*) Bloc version 6.1.0:
+    -> in this version the new concept had introduced:
+        1) context.watch<BlocA>() 
+            -> watch multiple bloc/cubit instance
+            -> From the widget that was build within the context BuildContext
+            -> Start searching from the unique instance of BlocA(), provided above in the widget tree, then
+            -> After it's found, watch or "subscribe" to it's stream of emitted states,
+            -> And whenever a new state is emitted by BlocA
+            -> Rebuild the widget from which the lookup was started
+        -> to see the example we will going to write code in 'home_screen.dart' 
+        2) context.select() 
+            -> if you want to rebuild the widget when the specific value from the cubit/bloc instance got change
+        3) context.read()
+            -> is a way to read/access a provided instance of bloc/cubit inside the widget tree like: BlocProvider.of(context)
+            -> Won't rebuild your widget from where you'll start searching from the bloc/cubit instance
+            -> should be called only when you need it, and only where you need it
