@@ -1,0 +1,13 @@
+*) State of a bloc/cubit won't update but...
+    *) Why & When is this happening?
+        -> When we are emitting the same state as the previous one
+        -> Bloc library won't allow two identical state to be emitted one after another
+        -> 
+    *) How does Dart compare 2 objects?
+        -> Two object are equal if and only if both are the same object
+        -> so both object that is an instance if same class and have same value as well but are different instance then they are not equal in dart
+        -> so to make them equal we can use 'equatable' package or we can override the default behavior of '==' operator
+        -> flutter pub add equatable
+        -> example: https://github.com/TheWCKD/blocFromZeroToHero/tree/master/%2310%20-%20State%20not%20updating
+    *) How we can Prevent & Fix it
+        -> 

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import '../../constants/enum.dart';
 import '../../logic/cubit/internet_cubit.dart';
 import 'package:flutter/material.dart';
