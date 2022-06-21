@@ -82,5 +82,12 @@
 
 
 *) How to run flutter app Wireless
+   -> go to android sdk directory:
+        -> EX: C:\Users\<user>\AppData\Local\Android\Sdk\platform-tools
   -> adb tcpip 5555 (write any available port)
-  -> adb connect 192.168.10.100:5555 (use ip provided by mobile device)
+  -> adb connect 192.168.10.100:5555 (use public ip provided by mobile device)
+  -> adb devices (to see all adb devices)
+  -> adb connect 192.168.10.100 (to connect to ip address device wirelessy)
+  -> ping 192.168.10.100 (to see device is in network or not)
+  -> adb kill-server (to kill connected server)
+  -> adb usb (to see/connect through usb)
