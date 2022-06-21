@@ -1,0 +1,15 @@
+-> flutter build windows
+-> you will get the exe app in : build\windows\runner\Release
+	-> all the application related data will be available in 'release' folder
+
+=> When we have to package this release build we have to include this exe and all the other assets that are in the 'release' folder
+-> and we need to compress all this thing into exe exicutable setup
+-> for that we can use inno setup:
+	-> https://jrsoftware.org/isinfo.php
+	-> download inno and install it and then run
+	-> Now create the script using Script Wizard as per application reuqirement
+	-> https://youtu.be/XvwX-hmYv0E?t=225
+
+-> now we will go the the application project folder and on the root directory of project we will create folder name called 'installers'
+	-> now the executable setup for the windows and the script that we will going to use to create that will go to this folder
+	-> so that we can easily reuse them after
