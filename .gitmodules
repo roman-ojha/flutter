@@ -4,3 +4,6 @@
 [submodule "Tutorial/Project_Tutorial/Todo_Dapp"]
 	path = Tutorial/Project_Tutorial/Todo_Dapp
 	url = https://github.com/Roman-Ojha/flutter-blockchain-todo-dapp-tut.git
+[submodule "Tutorial/Project_Tutorial/flutter_chat_ui"]
+	path = Tutorial/Project_Tutorial/flutter_chat_ui
+	url = https://github.com/Roman-Ojha/flutter-chat-ui.git
