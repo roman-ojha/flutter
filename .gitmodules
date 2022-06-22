@@ -1,0 +1,6 @@
+[submodule "Tutorial/Project_Tutorial/spotify"]
+	path = Tutorial/Project_Tutorial/spotify
+	url = https://github.com/Roman-Ojha/flutter-desktop-spotify-clone
+[submodule "Tutorial/Project_Tutorial/Todo_Dapp"]
+	path = Tutorial/Project_Tutorial/Todo_Dapp
+	url = https://github.com/Roman-Ojha/flutter-blockchain-todo-dapp-tut.git
