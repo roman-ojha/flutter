@@ -17,7 +17,7 @@ class ShowUser extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: ListView(children: [
+      child: Column(children: [
         Text("ID: ${userID.toString()}"),
         Text("FirstName: $firstName"),
         Text("LastName: $lastName")
