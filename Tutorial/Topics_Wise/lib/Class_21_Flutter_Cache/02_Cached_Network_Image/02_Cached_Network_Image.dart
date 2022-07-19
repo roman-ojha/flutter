@@ -125,9 +125,9 @@ class _MyHomePageState extends State<MyHomePage> {
     // so here we will use 'flutter_cache_manager' package
     DefaultCacheManager().emptyCache();
 
-    imageCache!.clear();
+    imageCache.clear();
     // this imageCache come's with flutter sdk
-    imageCache!.clearLiveImages();
+    imageCache.clearLiveImages();
 
     // after clearing cached image we have to update an UI;
     setState(() {});

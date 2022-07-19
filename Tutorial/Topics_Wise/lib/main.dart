@@ -78,8 +78,9 @@ import 'package:flutter/material.dart';
 // import "Class_25_File/03_Saving_Files_to_Application_Folder_and_Gallery/03_Saving_Files_to_Application_Folder_and_Gallery.dart";
 // import "Class_25_File/04_File_Manager/04_File_Manager.dart";
 // import "Class_26_Flutter_Other_Packages/01_URL_Launcher/01_URL_Launcher.dart";
-import 'Class_27_Access/01_Image_Access_from_Camera_&_Gallery/01_Image_Access_from_Camera_&_Gallery.dart';
-import "Class_28_Socket/01_Web_socket_channel_package/01_Web_socket_channel_package.dart";
+// import 'Class_27_Access/01_Image_Access_from_Camera_&_Gallery/01_Image_Access_from_Camera_&_Gallery.dart';
+// import "Class_28_Socket/01_Web_socket_channel_package/01_Web_socket_channel_package.dart";
+import 'Class_23_Responsive_and_Adaptive_Flutter/02_MediaQuery/02_MediaQuery.dart';
 
 void main() async {
   // Class 21 -------------
@@ -209,6 +210,7 @@ class MyApp extends StatelessWidget {
 
     // Class 23 --------------------
     // return ResponsiveFlutter01();
+    return MediaQueryClass();
 
     // Class 24 ------------------------
     // return MaterialApp(
@@ -234,6 +236,6 @@ class MyApp extends StatelessWidget {
     // return ImagePickerPackage();
 
     // Class 28 -------------------------
-    return WebSocketChannelPackage();
+    // return WebSocketChannelPackage();
   }
 }
