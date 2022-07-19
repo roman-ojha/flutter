@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_dotenv/flutter_dotenv.dart';
 // import 'Class_00_Other_Topics/03_Env/models/environment.dart';
 // import "Class_00_Other_Topics/02_Builder/03_FutureBuilder/03_FutureBuilder.dart";
+import "Class_00_Other_Topics/04_Flutter_Class/04_Flutter_Class.dart";
 // import 'Class_01_Text_Widget/Text/TextWidget.dart';
 // import 'Class_01_Text_Widget/02_Rich_Text/02_Rich_Text.dart';
 // import 'Class_02_Layout_Widget/Single_Child_Layout_Widget/01_Container_Class/ContainerWidget.dart';
@@ -71,7 +72,7 @@ import 'package:flutter/material.dart';
 // import "Class_21_Flutter_Cache/02_Cached_Network_Image/02_Cached_Network_Image.dart";
 // import 'package:hive_flutter/hive_flutter.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
-import 'Class_23_Responsive_and_Adaptive_Flutter/01_LayoutBuilder/01_LayoutBuilder.dart';
+// import 'Class_23_Responsive_and_Adaptive_Flutter/01_LayoutBuilder/01_LayoutBuilder.dart';
 // import 'Class_23_Responsive_and_Adaptive_Flutter/02_MediaQuery/02_MediaQuery.dart';
 // import "package:env/Class_24_AlertDialog/01_AlertDialog_Class_and_Exiting_App/01_AlertDialog_Class.dart";
 // import 'Class_25_File/01_Read_and_Write_Files/01_Read_and_Write_Files.dart';
@@ -103,6 +104,7 @@ class MyApp extends StatelessWidget {
     // return ListViewBuilder();
     // return FlutterEnv();
     // return FutureBuilderClass();
+    return FlutterClasses();
 
     // class 01-----------------
     // return TextWidget();
@@ -209,7 +211,7 @@ class MyApp extends StatelessWidget {
     // return FlutterCustomClipperWidget();
 
     // Class 23 --------------------
-    return LayoutBuilderClass();
+    // return LayoutBuilderClass();
     // return MediaQueryClass();
 
     // Class 24 ------------------------
