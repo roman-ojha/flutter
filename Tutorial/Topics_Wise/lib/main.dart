@@ -71,7 +71,8 @@ import 'package:flutter/material.dart';
 // import "Class_21_Flutter_Cache/02_Cached_Network_Image/02_Cached_Network_Image.dart";
 // import 'package:hive_flutter/hive_flutter.dart';
 // import 'Class_22_Flutter_Curved_Widget/01_Flutter_Custom_Clipper/01_Flutter_Custom_Clipper.dart';
-// import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/01_Responsive01.dart';
+import 'Class_23_Responsive_and_Adaptive_Flutter/01_LayoutBuilder/01_LayoutBuilder.dart';
+// import 'Class_23_Responsive_and_Adaptive_Flutter/02_MediaQuery/02_MediaQuery.dart';
 // import "package:env/Class_24_AlertDialog/01_AlertDialog_Class_and_Exiting_App/01_AlertDialog_Class.dart";
 // import 'Class_25_File/01_Read_and_Write_Files/01_Read_and_Write_Files.dart';
 // import "Class_25_File/02_File_Picker/02_File_Picker.dart";
@@ -80,7 +81,6 @@ import 'package:flutter/material.dart';
 // import "Class_26_Flutter_Other_Packages/01_URL_Launcher/01_URL_Launcher.dart";
 // import 'Class_27_Access/01_Image_Access_from_Camera_&_Gallery/01_Image_Access_from_Camera_&_Gallery.dart';
 // import "Class_28_Socket/01_Web_socket_channel_package/01_Web_socket_channel_package.dart";
-import 'Class_23_Responsive_and_Adaptive_Flutter/02_MediaQuery/02_MediaQuery.dart';
 
 void main() async {
   // Class 21 -------------
@@ -209,8 +209,8 @@ class MyApp extends StatelessWidget {
     // return FlutterCustomClipperWidget();
 
     // Class 23 --------------------
-    // return ResponsiveFlutter01();
-    return MediaQueryClass();
+    return LayoutBuilderClass();
+    // return MediaQueryClass();
 
     // Class 24 ------------------------
     // return MaterialApp(

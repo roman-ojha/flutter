@@ -1,4 +1,4 @@
-import 'package:env/Class_23_Responsive_and_Adaptive_Flutter/01_Responsive01/responsive_helper.dart';
+import 'responsive_helper.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
