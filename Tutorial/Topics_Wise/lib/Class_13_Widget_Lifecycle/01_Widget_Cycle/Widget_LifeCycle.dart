@@ -14,9 +14,17 @@
       -> ex: passing variable down to constructor and those variable update/change
       -> ex: when you pass a duration for a animation controller
     4) deactivate
+      -> called when object is removed from the tree
+      -> when moving the widget in the widget tree using globalKey
+      -> this is not dispose method
+      -> do now dispose it here
     5) dispose
+      -> called when object is removed from the tree permanently
+      -> here you will write the dispose logic
+      -> ex: when replacing this widget with another for example using Navigator.pushReplacement and
+      -> 
     6) build
-  # Widget Lifecycle:
+  # Widget Lifecycle on StateLess and StateFul Widget:
     1) Stateless
       => State does not Change over time
       => Build Function only runs once
@@ -27,11 +35,14 @@
           a) initState()
             -> Called only once when the widget is created
             -> Subscribe to streams or any object that could change our widget data
-          b) Build()
+          b) build()
             -> Builds that widget tree
             -> A build is triggered every time we use setState()
-          c) Dispose()
+          c) dispose()
             -> When the widget/state object is removed
+          d) didChangeDependencies()
+          e) didUpdateWidget() 
+          f) deactivate()
 */
 
 import 'package:flutter/material.dart';
@@ -98,6 +109,7 @@ class _MyHomePageState extends State<MyHomePage>
     super.didChangeDependencies();
   }
 
+  // 3. didUpdateWidget
   @override
   void didUpdateWidget(covariant MyHomePage oldWidget) {
     // super call need to call first in this method
@@ -108,6 +120,26 @@ class _MyHomePageState extends State<MyHomePage>
       // it means that title had changed
       print("title changed");
     }
+  }
+
+  // 4. deactivate
+  @override
+  void deactivate() {
+    print('deactivate');
+    // super call is at the bottom of this method
+    super.deactivate();
+  }
+
+  // 5. dispose
+  @override
+  void dispose() {
+    print('dispose');
+    // here we know that we had create the animation controller and this is the most important this to dispose
+    _animationController.dispose();
+    // if we will not dispose then we will have a memory leak in our application
+
+    // super call is at the bottom of this method
+    super.dispose();
   }
 
   @override
@@ -123,8 +155,37 @@ class _MyHomePageState extends State<MyHomePage>
             ElevatedButton(
               onPressed: this.widget.onPressed,
               child: Text("ChangeTitle"),
-            )
+            ),
+
+            // Ex of 'dispose'
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => AfterDispose(),
+                    ),
+                  );
+                },
+                child: Text("Dispose"))
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class AfterDispose extends StatelessWidget {
+  const AfterDispose({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('AfterDispose'),
+      ),
+      body: Center(
+        child: Container(
+          child: Text("After Dispose"),
         ),
       ),
     );
