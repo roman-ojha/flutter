@@ -1,4 +1,14 @@
 /*
+  # Different Type of lifecycle method on flutter
+    1) initState
+      -> First Lifecycle method that is called when the widget is created
+      -> This is called before the build method
+      -> here you can do any kind of initialization needed for the widget
+    2) didChangeDependencies
+    3) didUpdateWidget
+    4) deactivate
+    5) dispose
+    6) build
   # Widget Lifecycle:
     1) Stateless
       => State does not Change over time
@@ -16,3 +26,35 @@
           c) Dispose()
             -> When the widget/state object is removed
 */
+
+import 'package:flutter/material.dart';
+
+class FlutterLifeCycle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'FlutterLifeCycle',
+      debugShowCheckedModeBanner: false,
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('FlutterLifeCycle'),
+      ),
+      body: Container(),
+    );
+  }
+}
