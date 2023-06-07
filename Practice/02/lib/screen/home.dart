@@ -10,13 +10,69 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  int number = 0;
+
+  void incrementNumber() {
+    setState(() {
+      number++;
+    });
+  }
+
+  void decrementNumber() {
+    setState(() {
+      number--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Column(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              number.toString(),
+              style:
+                  const TextStyle(fontSize: 40.0, fontWeight: FontWeight.w900),
+            ),
+            const SizedBox(
+              height: 50.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: incrementNumber,
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.blue),
+                    foregroundColor:
+                        MaterialStateProperty.all<Color>(Colors.white),
+                  ),
+                  child: const Icon(Icons.add),
+                ),
+                const SizedBox(
+                  width: 30.0,
+                ),
+                TextButton(
+                  onPressed: decrementNumber,
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.blue),
+                    foregroundColor:
+                        MaterialStateProperty.all<Color>(Colors.white),
+                  ),
+                  child: const Icon(Icons.remove),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
