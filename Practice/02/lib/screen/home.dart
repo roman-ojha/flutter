@@ -30,10 +30,47 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      drawer: Drawer(
+        elevation: 50,
+        child: Column(
+          children: [
+            DrawerHeader(
+              decoration: const BoxDecoration(color: Colors.red),
+              child: Container(
+                height: 10.0,
+                alignment: Alignment.center,
+                child: const Text("Drawer"),
+              ),
+            )
+          ],
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            RichText(
+              text: TextSpan(
+                text: "Increment",
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                ),
+                children: [
+                  TextSpan(
+                    text: "Decrement",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      // color: Colors.red,
+                      foreground: Paint()..color = Colors.red,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 100.0,
+            ),
             Text(
               number.toString(),
               style:
