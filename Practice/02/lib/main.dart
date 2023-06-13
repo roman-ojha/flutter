@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:practice02/routes/main.dart';
 import "package:practice02/screen/home.dart" as screen;
+import 'package:practice02/screen/second.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,10 +21,8 @@ class MyApp extends StatelessWidget {
             backgroundColor: Color.fromRGBO(0, 0, 0, 1),
             foregroundColor: Colors.white,
           )),
-      home: const screen.HomePage(
-        title: "Home Page",
-      ),
       debugShowCheckedModeBanner: false,
+      routes: AppRoute().getRoute(),
     );
   }
 }

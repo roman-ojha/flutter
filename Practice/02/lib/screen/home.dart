@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "../screen/second.dart";
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title});
@@ -32,15 +33,38 @@ class _HomePageState extends State<HomePage> {
       ),
       drawer: Drawer(
         elevation: 50,
-        child: Column(
+        child: ListView(
           children: [
-            DrawerHeader(
-              decoration: const BoxDecoration(color: Colors.red),
-              child: Container(
-                height: 10.0,
-                alignment: Alignment.center,
-                child: const Text("Drawer"),
+            SizedBox(
+              height: 45.0,
+              child: DrawerHeader(
+                decoration: const BoxDecoration(
+                  color: Colors.red,
+                ),
+                padding: const EdgeInsets.all(0),
+                child: Container(
+                  alignment: Alignment.center,
+                  child: const Text(
+                    "Drawer",
+                    style: TextStyle(fontSize: 30.0),
+                  ),
+                ),
               ),
+            ),
+            ListTile(
+              title: const Text("Home"),
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text("Second Page"),
+              onTap: () {
+                // Navigator.of(context).push(
+                //   MaterialPageRoute(
+                //     builder: (context) => const SecondPage(),
+                //   ),
+                // );
+                Navigator.of(context).pushNamed('/second');
+              },
             )
           ],
         ),
