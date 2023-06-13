@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice02/widgets/drawer.dart';
 
 class SecondPage extends StatelessWidget {
   final String title;
@@ -6,11 +7,11 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ;
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
       ),
+      drawer: const AppDrawer(),
     );
   }
 }
