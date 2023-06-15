@@ -5,7 +5,7 @@ import 'package:practice02/screen/second.dart';
 class AppRoute {
   Map<String, Widget Function(BuildContext)> routes = {
     '/': (_) => const HomePage(title: "Home Page"),
-    '/second': (_) => const SecondPage(
+    '/second': (_) => SecondPage(
           title: "Second Page",
         ),
   };
