@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -44,6 +42,14 @@ class AppDrawer extends StatelessWidget {
               // );
               if (routeName != "/second") {
                 Navigator.of(context).pushNamed('/second');
+              }
+            },
+          ),
+          ListTile(
+            title: const Text("Third"),
+            onTap: () {
+              if (routeName != '/third') {
+                Navigator.of(context).pushNamed('/third');
               }
             },
           )
