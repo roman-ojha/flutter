@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:practice02/widgets/drawer.dart";
 
 class ThirdPage extends StatefulWidget {
   const ThirdPage({super.key});
@@ -8,14 +9,42 @@ class ThirdPage extends StatefulWidget {
 }
 
 class _ThirdPageState extends State<ThirdPage> {
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
+
+  void openDrawer() {
+    _key.currentState!.openDrawer();
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 3,
       initialIndex: 1,
       child: Scaffold(
+        key: _key,
         appBar: AppBar(
           title: const Text("Third Page"),
+          centerTitle: true,
+          elevation: 10.1,
+          leadingWidth: 100.0,
+          leading: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: openDrawer,
+              ),
+              Navigator.of(context).canPop()
+                  ? IconButton(
+                      icon: Icon(Icons.arrow_back),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    )
+                  : const SizedBox(),
+            ],
+          ),
           bottom: const TabBar(tabs: [
             Tab(
               child: Icon(
@@ -37,6 +66,7 @@ class _ThirdPageState extends State<ThirdPage> {
             ),
           ]),
         ),
+        drawer: const AppDrawer(),
         body: const TabBarView(
           children: [
             TabBarPage(title: "Video Page"),
